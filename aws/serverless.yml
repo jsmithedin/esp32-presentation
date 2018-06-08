@@ -4,11 +4,12 @@ frameworkVersion: ">=1.5.0 <2.0.0"
 
 provider:
     name: aws
-    runtime: aws-python3
+    region: eu-west-1
+    runtime: python3.6
 
 functions:
     react:
         handler: handler.react
         events:
             - iot:
-                sql: "SELECT * FROM 'officetemp'"
+                sql: "SELECT * FROM 'test/jamies'"
