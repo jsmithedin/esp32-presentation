@@ -6,6 +6,7 @@ client = boto3.client('iot-data', region_name='eu-west-1')
 
 def react(event, context):
     # Parse this sensor reading
+    temperature = event
 
     command = 'CLOSED'
     # Is it too hot?!
